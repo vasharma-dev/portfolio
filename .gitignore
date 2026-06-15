@@ -1,0 +1,11 @@
+# OS / editor junk
+.DS_Store
+Thumbs.db
+desktop.ini
+*.tmp
+
+# dependency dirs (none used, but safe)
+node_modules/
+
+# local test artifacts
+_*.png

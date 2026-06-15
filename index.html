@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Vansh Sharma — AI Engineer & Full-Stack Developer. I ship production LLM-powered products end to end.">
+<title>Vansh Sharma · AI Engineer & Full-Stack Developer</title>
+<script>document.documentElement.classList.add('js');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- animated background layers -->
+<canvas id="net"></canvas>
+<div class="glow glow-1"></div>
+<div class="glow glow-2"></div>
+<div class="grid-overlay"></div>
+
+<!-- progress bar -->
+<div id="scroll-progress"></div>
+
+<!-- NAV -->
+<header class="nav" id="nav">
+  <a href="#hero" class="logo">VS<span>.</span></a>
+  <nav class="nav-links">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#work">Work</a>
+    <a href="#experience">Experience</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <a href="Vansh_Sharma_Resume.html" target="_blank" class="btn-ghost">Résumé ↗</a>
+  <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <div class="badge reveal"><span class="dot"></span>Available for AI / Full-Stack roles</div>
+      <h1 class="reveal">
+        <span class="line">Vansh</span>
+        <span class="line gradient">Sharma</span>
+      </h1>
+      <p class="role reveal">I'm an <span id="typed"></span></p>
+      <p class="tagline reveal">
+        I design and ship <b>production LLM-powered products</b> end&nbsp;to&nbsp;end — agentic
+        assistants, vision OCR, RAG and multi-provider model routing, wired into real
+        NestJS&nbsp;+&nbsp;React systems that serve live users.
+      </p>
+      <div class="cta-row reveal">
+        <a href="#work" class="btn-primary">View my work <span>→</span></a>
+        <a href="Vansh_Sharma_Resume.html" target="_blank" class="btn-outline">Download résumé</a>
+      </div>
+      <div class="socials reveal">
+        <a href="https://github.com/vasharma-dev" target="_blank">GitHub</a>
+        <a href="https://linkedin.com/in/vansh-sharma-3638a830b" target="_blank">LinkedIn</a>
+        <a href="mailto:vasharma2002@gmail.com">Email</a>
+      </div>
+    </div>
+
+    <div class="hero-avatar reveal">
+      <div class="avatar-ring">
+        <!-- Drop a photo named "profile.jpg" into the /assets folder to replace the initials -->
+        <div class="avatar has-photo" id="avatar" style="--img:url('assets/avatar.svg')">
+          <span class="avatar-initials">VS</span>
+        </div>
+      </div>
+      <div class="orbit orbit-a"><span>AI</span></div>
+      <div class="orbit orbit-b"><span>LLM</span></div>
+      <div class="float-chip chip-1">OpenAI</div>
+      <div class="float-chip chip-2">NestJS</div>
+      <div class="float-chip chip-3">Claude</div>
+      <div class="float-chip chip-4">React</div>
+    </div>
+  </div>
+
+  <div class="scroll-hint"><span></span>scroll</div>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+  <div class="stat reveal"><span class="num" data-target="5">0</span><label>AI products contributed to</label></div>
+  <div class="stat reveal"><span class="num" data-target="90" data-suffix="+">0</span><label>LLM tools built</label></div>
+  <div class="stat reveal"><span class="num" data-target="6">0</span><label>Model providers integrated</label></div>
+  <div class="stat reveal"><span class="num" data-target="300" data-suffix="+">0</span><label>Features delivered</label></div>
+</section>
+
+<!-- ABOUT -->
+<section class="section" id="about">
+  <div class="sec-head reveal"><span class="kicker">01 — About</span><h2>Applied AI, shipped to production.</h2></div>
+  <div class="about-grid">
+    <p class="reveal">
+      I'm a Full-Stack Developer specialising in <b>applied AI</b>. At <b>Jicama Tech</b> I'm the
+      engineer behind multiple production platforms — owning the backend, frontend, <b>and</b> the
+      AI layer. I love turning fuzzy business workflows into natural-language experiences:
+      agentic assistants that actually <i>do</i> things through tool-calling, vision models that
+      read receipts and documents, and retrieval systems that make data answerable.
+    </p>
+    <p class="reveal">
+      Beyond the model layer, I ship the whole thing — typed NestJS APIs, React front-ends,
+      multi-tenant architecture, payments, and the <b>DevOps</b> to keep it live (Nginx, PM2,
+      systemd on Linux VPS). I care about clean architecture, cost-aware model routing, and
+      systems that don't fall over.
+    </p>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section class="section" id="skills">
+  <div class="sec-head reveal"><span class="kicker">02 — Toolkit</span><h2>What I build with.</h2></div>
+  <div class="skills-grid">
+    <div class="skill-card reveal">
+      <h3><span class="i">✦</span> AI / LLM</h3>
+      <div class="tags">
+        <span class="t hot">OpenAI API</span><span class="t hot">Anthropic Claude SDK</span>
+        <span class="t hot">Qwen-VL Vision</span><span class="t hot">Groq</span>
+        <span class="t hot">Gemini</span><span class="t hot">Mistral</span>
+        <span class="t">Tool / Function Calling</span><span class="t">Agentic Routing</span>
+        <span class="t">Multi-Agent Orchestration</span><span class="t">RAG / GraphRAG</span>
+        <span class="t">Vision OCR</span><span class="t">Prompt Engineering</span>
+        <span class="t">Multi-Provider Fallback</span>
+      </div>
+    </div>
+    <div class="skill-card reveal">
+      <h3><span class="i">⚙</span> Backend</h3>
+      <div class="tags">
+        <span class="t">NestJS</span><span class="t">Node.js</span><span class="t">Express</span>
+        <span class="t">REST APIs</span><span class="t">MongoDB</span><span class="t">PostgreSQL</span>
+        <span class="t">Mongoose</span><span class="t">TypeORM</span><span class="t">Prisma</span>
+        <span class="t">JWT / OAuth</span><span class="t">Redis</span>
+      </div>
+    </div>
+    <div class="skill-card reveal">
+      <h3><span class="i">▤</span> Frontend & Mobile</h3>
+      <div class="tags">
+        <span class="t">React 18/19</span><span class="t">TypeScript</span><span class="t">Angular 19</span>
+        <span class="t">Tailwind</span><span class="t">Radix / shadcn</span>
+        <span class="t">React Query</span><span class="t">Capacitor</span>
+      </div>
+    </div>
+    <div class="skill-card reveal">
+      <h3><span class="i">⛁</span> DevOps & Infra</h3>
+      <div class="tags">
+        <span class="t">Linux (Ubuntu)</span><span class="t">Nginx</span><span class="t">PM2</span>
+        <span class="t">systemd</span><span class="t">Docker</span><span class="t">Reverse Proxy / SSL</span>
+        <span class="t">VPS Maintenance</span><span class="t">CI / CD</span><span class="t">Domain / DNS</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WORK -->
+<section class="section" id="work">
+  <div class="sec-head reveal"><span class="kicker">03 — Selected work</span><h2 style="max-width:none">Products I've been part of.</h2>
+    <p class="sec-sub reveal">Built at Jicama Tech · source code is in private repositories.</p>
+  </div>
+  <div class="projects">
+
+    <article class="project reveal">
+      <div class="p-top"><span class="p-index">/01</span><span class="p-stack">NestJS · React · MongoDB</span></div>
+      <h3>KiosCart <span class="p-kind">AI Commerce & POS</span></h3>
+      <p>All-in-one commerce platform for kiosks & retail with a built-in <b>agentic AI shopkeeper
+        assistant</b> — multi-provider LLM (Qwen / Groq / OpenAI + Anthropic) with an agentic router
+        across <b>90+ callable tools</b> (orders, inventory, CRM, analytics, payments) and
+        natural-language kiosk ordering with fuzzy matching.</p>
+      <div class="p-tags"><span>Agentic AI</span><span>Tool-Calling</span><span>White-label storefronts</span><span>UPI / PayNow</span></div>
+    </article>
+
+    <article class="project reveal">
+      <div class="p-top"><span class="p-index">/02</span><span class="p-stack">NestJS · React · MongoDB</span></div>
+      <h3>EventSH <span class="p-kind">AI Event Management</span></h3>
+      <p>Multi-tenant platform for organisers, vendors, speakers & attendees featuring an
+        <b>AI chatbot (100+ functions)</b>, an <b>AI venue-layout designer</b>, and an
+        <b>AI bulk-import</b> pipeline that turns messy CSVs into structured data. Razorpay payments,
+        multi-currency, QR check-in, PDF tickets.</p>
+      <div class="p-tags"><span>OpenAI</span><span>Venue Designer</span><span>QR Check-in</span><span>Multi-tenant</span></div>
+    </article>
+
+    <article class="project reveal launching">
+      <div class="p-top"><span class="p-index">/03</span><span class="badge-launch"><span class="dot"></span>Launching stage</span></div>
+      <h3>XpenseAIQ <span class="p-kind">AI Expense Management</span></h3>
+      <p>Turns a photo of a receipt into structured data with <b>vision-LLM OCR (Qwen-VL)</b> and
+        Gemini/Mistral fallback. Adds a <b>GraphRAG</b> knowledge graph (expenses ↔ vendors ↔
+        categories), an <b>8-rule fraud-detection engine</b>, and natural-language spend chat.</p>
+      <div class="p-tags"><span>Vision OCR</span><span>GraphRAG</span><span>Fraud Detection</span><span>LLM Chat</span></div>
+    </article>
+
+    <article class="project reveal building">
+      <div class="p-top"><span class="p-index">/04</span><span class="badge-dev"><span class="dot"></span>In development</span></div>
+      <h3>DocAIQ <span class="p-kind">Multi-Agent Compliance Audit</span></h3>
+      <p>Self-learning, graph-RAG <b>multi-agent</b> platform that auto-audits documents against
+        SOC&nbsp;2 / ISO&nbsp;27001 / HIPAA / PCI-DSS / NIST. A pipeline of agents (classifier,
+        matcher, fact & KYC extractors, validator) produces <b>evidence-grounded, cited</b> findings
+        with confidence scoring and human-in-the-loop review.</p>
+      <div class="p-tags"><span>Multi-Agent</span><span>GraphRAG</span><span>Claude / OpenRouter</span><span>Evidence-cited</span></div>
+    </article>
+
+    <article class="project reveal building">
+      <div class="p-top"><span class="p-index">/05</span><span class="badge-dev"><span class="dot"></span>In development</span></div>
+      <h3>Jicama Feedback Plugin <span class="p-kind">Embeddable Feedback SaaS</span></h3>
+      <p>A multi-tenant, embeddable feedback platform — drop-in <b>widget</b>, a
+        <b>JS SDK (@jicama/feedback)</b>, and a React + Vite + Tailwind <b>tenant dashboard</b> with
+        self-serve signup, plans & billing. Roadmap brings <b>AI</b> auto-categorisation,
+        summarisation, duplicate detection and sentiment scoring.</p>
+      <div class="p-tags"><span>Widget + SDK</span><span>Multi-tenant</span><span>Prisma</span><span>AI sentiment (WIP)</span></div>
+    </article>
+
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="section" id="experience">
+  <div class="sec-head reveal"><span class="kicker">04 — Journey</span><h2>Experience & education.</h2></div>
+  <div class="timeline">
+    <div class="tl-item reveal">
+      <div class="tl-dot"></div>
+      <div class="tl-when">Jun 2025 — Present</div>
+      <div class="tl-body">
+        <h3>AI & Full-Stack Developer <span>· Jicama Tech Pvt. Ltd.</span></h3>
+        <p>Sole engineer behind two production platforms (KiosCart & EventSH). Built multi-provider
+          agentic LLM assistants, AI venue design & bulk import, and cost-aware model fallback —
+          then deployed & maintained it all on Linux VPS (Nginx, PM2, systemd).</p>
+      </div>
+    </div>
+    <div class="tl-item reveal">
+      <div class="tl-dot"></div>
+      <div class="tl-when">Dec 2024 — May 2025</div>
+      <div class="tl-body">
+        <h3>Full-Stack Developer Intern <span>· MehtaSoftech Pvt. Ltd.</span></h3>
+        <p>Built web apps with NestJS, Node.js & Angular 19. Delivered a Learning Management System
+          (NestJS + Angular 19 + PostgreSQL) for courses, quizzes, progress & certifications.</p>
+      </div>
+    </div>
+    <div class="tl-item reveal">
+      <div class="tl-dot"></div>
+      <div class="tl-when">2023 — 2025</div>
+      <div class="tl-body">
+        <h3>Master of Computer Applications (MCA)</h3>
+        <p>Shri Chimanbhai Patel Institute of Computer Applications · Sardar Vallabhbhai Global University · CGPA 7.71.</p>
+      </div>
+    </div>
+    <div class="tl-item reveal">
+      <div class="tl-dot"></div>
+      <div class="tl-when">2020 — 2023</div>
+      <div class="tl-body">
+        <h3>Bachelor of Computer Applications (BCA)</h3>
+        <p>Navgujarat College of Computer Applications · Gujarat University · CGPA 7.07.</p>
+      </div>
+    </div>
+  </div>
+  <div class="certs-row reveal">
+    <span class="cert">Certified in Cybersecurity (CC) — ISC2</span>
+    <span class="cert">Java — Great Learning</span>
+    <span class="cert">Foundations of Data — Google</span>
+    <span class="cert">Cybersecurity Tools — IBM</span>
+    <span class="cert">Technical Support — Google</span>
+    <span class="cert">Responsive Web — Univ. of London</span>
+    <span class="cert">C — C-DAC (A+)</span>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section contact" id="contact">
+  <div class="sec-head reveal"><span class="kicker">05 — Contact</span><h2 class="gradient-2">Let's build something intelligent.</h2></div>
+  <p class="contact-sub reveal">Open to AI / Full-Stack opportunities. The fastest way to reach me:</p>
+  <div class="contact-links reveal">
+    <a href="mailto:vasharma2002@gmail.com" class="c-link"><span>Email</span>vasharma2002@gmail.com</a>
+    <a href="tel:+918401201831" class="c-link"><span>Phone</span>+91 84012 01831</a>
+    <a href="https://linkedin.com/in/vansh-sharma-3638a830b" target="_blank" class="c-link"><span>LinkedIn</span>/vansh-sharma</a>
+    <a href="https://github.com/vasharma-dev" target="_blank" class="c-link"><span>GitHub</span>/vasharma-dev</a>
+  </div>
+  <a href="mailto:vasharma2002@gmail.com" class="btn-primary big reveal">Say hello <span>→</span></a>
+</section>
+
+<footer>
+  <span>© <span id="year"></span> Vansh Sharma</span>
+  <span>Designed & built from scratch · Ahmedabad, India</span>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<svg width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="38%" r="75%">
+      <stop offset="0%" stop-color="#1a1730"/>
+      <stop offset="100%" stop-color="#0a0b14"/>
+    </radialGradient>
+    <linearGradient id="figure" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#a78bfa"/>
+      <stop offset="55%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#22d3ee"/>
+    </linearGradient>
+    <linearGradient id="mono" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#e9d5ff"/>
+      <stop offset="100%" stop-color="#a5f3fc"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- backdrop -->
+  <rect width="400" height="400" fill="url(#bg)"/>
+
+  <!-- faint circuit nodes / neural overlay -->
+  <g stroke="#22d3ee" stroke-width="1" opacity="0.28">
+    <line x1="60" y1="90" x2="120" y2="140"/>
+    <line x1="120" y1="140" x2="90" y2="210"/>
+    <line x1="340" y1="100" x2="290" y2="150"/>
+    <line x1="290" y1="150" x2="320" y2="220"/>
+    <line x1="70" y1="300" x2="130" y2="270"/>
+    <line x1="330" y1="300" x2="275" y2="275"/>
+  </g>
+  <g fill="#22d3ee" opacity="0.6">
+    <circle cx="60" cy="90" r="3"/><circle cx="120" cy="140" r="3"/><circle cx="90" cy="210" r="3"/>
+    <circle cx="340" cy="100" r="3"/><circle cx="290" cy="150" r="3"/><circle cx="320" cy="220" r="3"/>
+    <circle cx="70" cy="300" r="3"/><circle cx="330" cy="300" r="3"/>
+  </g>
+
+  <!-- bust silhouette -->
+  <g filter="url(#glow)">
+    <!-- shoulders -->
+    <path d="M70 400 C70 318 128 286 200 286 C272 286 330 318 330 400 Z" fill="url(#figure)"/>
+    <!-- head -->
+    <circle cx="200" cy="178" r="74" fill="url(#figure)"/>
+  </g>
+
+  <!-- inner cut so monogram reads clearly on the head -->
+  <circle cx="200" cy="178" r="74" fill="#0a0b14" opacity="0.78"/>
+
+  <!-- VS monogram -->
+  <text x="200" y="208" text-anchor="middle"
+        font-family="'Space Grotesk', 'Segoe UI', sans-serif" font-weight="700"
+        font-size="84" fill="url(#mono)" letter-spacing="-4">VS</text>
+
+  <!-- thin neural lines across shoulders -->
+  <g stroke="#0a0b14" stroke-width="2" opacity="0.45">
+    <path d="M120 320 Q200 300 280 320" fill="none"/>
+    <path d="M105 355 Q200 335 295 355" fill="none"/>
+  </g>
+</svg>

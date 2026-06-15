@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vansh Sharma — AI &amp; Full-Stack Developer</title>
+<style>
+  :root{
+    --ink:#1a1f2e;
+    --muted:#5a6477;
+    --accent:#6d28d9;       /* violet */
+    --accent2:#0ea5e9;      /* sky    */
+    --line:#e6e8ef;
+    --chipbg:#f3f0ff;
+    --chipink:#5b21b6;
+    --sidebg:#161a27;
+    --sidink:#e8eaf2;
+    --sidmuted:#a3acc4;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  body{
+    font-family:"Segoe UI",-apple-system,Roboto,Helvetica,Arial,sans-serif;
+    color:var(--ink);
+    background:#aeb4c4;
+    line-height:1.5;
+    font-size:13px;
+  }
+  .page{
+    width:210mm;min-height:297mm;margin:18px auto;background:#fff;
+    display:grid;grid-template-columns:64mm 1fr;
+    box-shadow:0 10px 40px rgba(0,0,0,.25);overflow:hidden;
+  }
+  /* ---------- SIDEBAR ---------- */
+  .side{background:var(--sidebg);color:var(--sidink);padding:26px 20px 30px}
+  .name{font-size:27px;font-weight:800;letter-spacing:.5px;line-height:1.1}
+  .name span{color:#a78bfa}
+  .role{margin-top:6px;font-size:11.5px;font-weight:600;letter-spacing:2.4px;
+    text-transform:uppercase;color:#7dd3fc}
+  .side h2{font-size:11px;letter-spacing:2px;text-transform:uppercase;
+    color:#fff;margin:24px 0 9px;padding-bottom:6px;border-bottom:1px solid #2d3346}
+  .side h2:first-of-type{margin-top:26px}
+  .contact a,.contact div{color:var(--sidmuted);text-decoration:none;
+    display:block;font-size:11.5px;margin-bottom:7px;word-break:break-word}
+  .contact .ic{color:#7dd3fc;display:inline-block;width:16px}
+  .skillgroup{margin-bottom:12px}
+  .skillgroup .lbl{font-size:10.5px;font-weight:700;color:#c4b5fd;
+    text-transform:uppercase;letter-spacing:.6px;margin-bottom:5px}
+  .chips{display:flex;flex-wrap:wrap;gap:5px}
+  .chip{background:#232838;color:#d7dcec;border:1px solid #313850;
+    border-radius:5px;padding:2.5px 7px;font-size:10.5px;font-weight:500}
+  .chip.hot{background:#3b1f6b;border-color:#5b21b6;color:#e9d5ff}
+  .side ul{list-style:none}
+  .side li{font-size:11.5px;color:var(--sidmuted);margin-bottom:6px;
+    padding-left:13px;position:relative}
+  .side li:before{content:"▹";position:absolute;left:0;color:#7dd3fc}
+  /* ---------- MAIN ---------- */
+  .main{padding:26px 26px 30px}
+  .main h2{font-size:13px;letter-spacing:1.5px;text-transform:uppercase;
+    color:var(--accent);margin:18px 0 10px;display:flex;align-items:center;gap:9px}
+  .main h2:first-child{margin-top:0}
+  .main h2:after{content:"";flex:1;height:2px;
+    background:linear-gradient(90deg,var(--accent),transparent)}
+  .summary{font-size:12.5px;color:#384055}
+  .summary b{color:var(--accent)}
+  .job{margin-bottom:14px;page-break-inside:avoid}
+  .job .top{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+  .job .ttl{font-size:13.5px;font-weight:700;color:var(--ink)}
+  .job .co{font-size:12px;font-weight:600;color:var(--accent2)}
+  .job .when{font-size:10.5px;font-weight:600;color:var(--muted);white-space:nowrap;
+    background:#f1f3f9;border-radius:4px;padding:2px 8px}
+  .job ul{list-style:none;margin-top:6px}
+  .job li{font-size:12px;color:#3a4254;margin-bottom:4px;padding-left:15px;position:relative}
+  .job li:before{content:"";position:absolute;left:2px;top:7px;width:5px;height:5px;
+    border-radius:50%;background:var(--accent)}
+  .job li b{color:var(--ink)}
+  .tag{display:inline-block;font-size:10px;font-weight:600;color:var(--chipink);
+    background:var(--chipbg);border-radius:4px;padding:1px 6px;margin:3px 4px 0 0}
+  .highlights{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:12px 0 4px}
+  .hl{background:linear-gradient(135deg,#f5f1ff,#eef6ff);border:1px solid #e3def7;
+    border-radius:8px;padding:8px 9px;text-align:center}
+  .hl .num{font-size:18px;font-weight:800;color:var(--accent);line-height:1}
+  .hl .cap{font-size:9px;font-weight:600;letter-spacing:.3px;color:var(--muted);
+    text-transform:uppercase;margin-top:4px;display:block;line-height:1.25}
+  .priv{font-size:9.5px;font-weight:600;color:var(--accent2);
+    background:#e8f6fe;border-radius:4px;padding:1px 6px;margin-left:6px;vertical-align:middle}
+  .certs{columns:2;column-gap:18px;font-size:11.5px;color:#3a4254}
+  .certs div{margin-bottom:4px;padding-left:13px;position:relative;break-inside:avoid}
+  .certs div:before{content:"✦";position:absolute;left:0;color:var(--accent2);font-size:10px}
+  @media print{
+    body{background:#fff}
+    .page{margin:0;box-shadow:none;width:auto;min-height:auto}
+    @page{size:A4;margin:0}
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- ============ SIDEBAR ============ -->
+  <aside class="side">
+    <div class="name">VANSH<br><span>SHARMA</span></div>
+    <div class="role">AI &amp; Full-Stack Developer</div>
+
+    <h2>Contact</h2>
+    <div class="contact">
+      <a href="tel:+918401201831"><span class="ic">📞</span>+91 84012 01831</a>
+      <a href="mailto:vasharma2002@gmail.com"><span class="ic">✉</span>vasharma2002@gmail.com</a>
+      <a href="https://linkedin.com/in/vansh-sharma-3638a830b"><span class="ic">in</span>linkedin.com/in/vansh-sharma-3638a830b</a>
+      <a href="https://github.com/vasharma-dev"><span class="ic">⌥</span>github.com/vasharma-dev</a>
+      <div><span class="ic">📍</span>Ahmedabad, Gujarat, India</div>
+    </div>
+
+    <h2>AI / LLM Stack</h2>
+    <div class="chips" style="margin-bottom:12px">
+      <span class="chip hot">OpenAI API</span>
+      <span class="chip hot">Anthropic Claude SDK</span>
+      <span class="chip hot">Qwen-VL (Vision)</span>
+      <span class="chip hot">Groq</span>
+      <span class="chip hot">Gemini</span>
+      <span class="chip hot">Mistral</span>
+      <span class="chip">Tool / Function Calling</span>
+      <span class="chip">Agentic Routing</span>
+      <span class="chip">Multi-Agent Orchestration</span>
+      <span class="chip">RAG / GraphRAG</span>
+      <span class="chip">Vision OCR</span>
+      <span class="chip">Prompt Engineering</span>
+      <span class="chip">Multi-Provider Fallback</span>
+    </div>
+
+    <h2>Engineering</h2>
+    <div class="skillgroup">
+      <div class="lbl">Backend</div>
+      <div class="chips">
+        <span class="chip">NestJS</span><span class="chip">Node.js</span>
+        <span class="chip">Express</span><span class="chip">REST APIs</span>
+        <span class="chip">MongoDB</span><span class="chip">PostgreSQL</span>
+        <span class="chip">Mongoose</span><span class="chip">TypeORM</span>
+        <span class="chip">JWT / OAuth</span><span class="chip">Redis</span>
+      </div>
+    </div>
+    <div class="skillgroup">
+      <div class="lbl">Frontend &amp; Mobile</div>
+      <div class="chips">
+        <span class="chip">React 18/19</span><span class="chip">TypeScript</span>
+        <span class="chip">Angular 19</span><span class="chip">Tailwind</span>
+        <span class="chip">Radix / shadcn</span><span class="chip">React Query</span>
+        <span class="chip">Capacitor</span>
+      </div>
+    </div>
+    <div class="skillgroup">
+      <div class="lbl">DevOps &amp; Infra</div>
+      <div class="chips">
+        <span class="chip">Linux (Ubuntu)</span><span class="chip">Nginx</span>
+        <span class="chip">PM2</span><span class="chip">systemd</span>
+        <span class="chip">Docker</span><span class="chip">Reverse Proxy / SSL</span>
+        <span class="chip">VPS / Server Maintenance</span><span class="chip">CI / CD</span>
+        <span class="chip">Git</span><span class="chip">Domain / DNS</span>
+      </div>
+    </div>
+    <div class="skillgroup">
+      <div class="lbl">Platform &amp; Integrations</div>
+      <div class="chips">
+        <span class="chip">Razorpay</span>
+        <span class="chip">UPI / PayNow</span><span class="chip">Puppeteer / PDF</span>
+        <span class="chip">QR / Barcode</span><span class="chip">Nodemailer</span>
+      </div>
+    </div>
+
+    <h2>Soft Skills</h2>
+    <ul>
+      <li>Problem-solving &amp; clean architecture</li>
+      <li>Ownership of end-to-end features</li>
+      <li>Collaboration &amp; communication</li>
+      <li>Fast learner of new AI tooling</li>
+    </ul>
+  </aside>
+
+  <!-- ============ MAIN ============ -->
+  <main class="main">
+
+    <h2>Profile</h2>
+    <p class="summary">
+      Full-Stack Developer specialising in <b>applied AI</b> — I ship production
+      <b>LLM-powered features</b> end to end. At Jicama Tech I designed and built
+      <b>agentic AI assistants</b> with multi-provider model routing, <b>100+ tool/function
+      definitions</b>, vision-based document parsing, and RAG retrieval, all wired into
+      real NestJS + React products serving live merchants and event organisers. I turn
+      complex business workflows into natural-language experiences while keeping the
+      systems behind them scalable, typed, and clean.
+    </p>
+
+    <div class="highlights">
+      <div class="hl"><span class="num">2</span><span class="cap">Production AI<br>Platforms Shipped</span></div>
+      <div class="hl"><span class="num">90+</span><span class="cap">LLM Tool /<br>Function Calls</span></div>
+      <div class="hl"><span class="num">6</span><span class="cap">AI Model<br>Providers Integrated</span></div>
+      <div class="hl"><span class="num">E2E</span><span class="cap">Backend · Frontend<br>· AI · Mobile</span></div>
+    </div>
+
+    <h2>Experience</h2>
+
+    <div class="job">
+      <div class="top">
+        <div><span class="ttl">AI &amp; Full-Stack Developer</span> &nbsp;·&nbsp;
+        <span class="co">Jicama Tech Pvt. Ltd.</span></div>
+        <span class="when">Jun 2025 – Present</span>
+      </div>
+      <ul>
+        <li>Sole engineer behind <b>two production platforms</b> — <b>KiosCart</b> (AI commerce &amp;
+            POS) and <b>EventSH</b> (AI event management) — owning backend, frontend, and the AI layer.</li>
+        <li><b>KiosCart:</b> built a <b>multi-provider agentic LLM assistant</b> (OpenAI / Anthropic
+            Claude / Qwen / Groq) with an <b>agentic router</b> that classifies intent and dispatches
+            to specialised sub-agents across <b>90+ callable tools</b> — orders, inventory, CRM,
+            analytics, and payments.</li>
+        <li><b>KiosCart:</b> added <b>natural-language kiosk ordering</b> with fuzzy product matching,
+            inline forms, and on-the-fly payment-QR generation.</li>
+        <li><b>EventSH:</b> shipped an <b>AI chatbot</b> (100+ functions), an <b>AI venue-layout
+            designer</b>, and an <b>AI bulk-import</b> pipeline that turns messy CSVs and prompts into
+            structured, validated data.</li>
+        <li>Engineered <b>cost-aware multi-provider fallback</b> (primary → secondary models on
+            rate-limit / failure) with OpenAI-compatible endpoints for Groq &amp; Qwen DashScope.</li>
+        <li>Delivered the supporting platform across both products: multi-tenant storefronts,
+            JWT/OAuth auth, Razorpay / UPI / PayNow payments, QR check-in, PDF/receipt generation,
+            and Capacitor mobile builds (iOS/Android).</li>
+        <li><b>Deployed &amp; maintained</b> the platforms on Linux VPS — <b>Nginx</b> reverse proxy
+            with SSL, <b>PM2</b> process management, <b>systemd</b> boot-time services, domain/DNS
+            setup, and ongoing server monitoring &amp; maintenance.</li>
+      </ul>
+      <div>
+        <span class="tag">NestJS</span><span class="tag">React + TS</span>
+        <span class="tag">MongoDB</span><span class="tag">OpenAI / Anthropic / Qwen / Groq</span>
+        <span class="tag">Agentic Tool-Calling</span><span class="tag">Capacitor</span>
+      </div>
+    </div>
+
+    <div class="job">
+      <div class="top">
+        <div><span class="ttl">Full-Stack Developer Intern</span> &nbsp;·&nbsp;
+        <span class="co">MehtaSoftech Pvt. Ltd.</span></div>
+        <span class="when">Dec 2024 – May 2025</span>
+      </div>
+      <ul>
+        <li>Built and integrated user-facing web apps with <b>NestJS, Node.js and Angular 19</b>,
+            developing REST APIs and reusable frontend components.</li>
+        <li>Delivered a <b>Learning Management System</b> (NestJS + Angular 19 + PostgreSQL) for
+            courses, quizzes, student progress, certifications, and automated/manual evaluation.</li>
+      </ul>
+    </div>
+
+    <h2>Key Projects <span class="priv">Jicama Tech · private repos</span></h2>
+
+    <div class="job">
+      <div class="top">
+        <div><span class="ttl">KiosCart</span> — AI Commerce &amp; POS Platform</div>
+        <span class="when">2025 – Present</span>
+      </div>
+      <ul>
+        <li>All-in-one commerce platform for kiosks &amp; retail with a built-in
+            <b>agentic AI shopkeeper assistant</b>: multi-provider LLM (Qwen/Groq/OpenAI +
+            Anthropic SDK), 90+ tools, and intent-based sub-agent routing.</li>
+        <li>White-label storefronts on custom domains, kiosk self-service ordering, CRM,
+            coupons, thermal/A4 receipts, and image (WebP) optimisation.</li>
+      </ul>
+      <div><span class="tag">NestJS</span><span class="tag">React + TS</span><span class="tag">MongoDB</span><span class="tag">LLM Agents</span></div>
+    </div>
+
+    <div class="job">
+      <div class="top">
+        <div><span class="ttl">EventSH</span> — AI Event-Management Platform</div>
+        <span class="when">2025 – Present</span>
+      </div>
+      <ul>
+        <li>Multi-tenant platform for organisers, vendors, speakers &amp; attendees with an
+            <b>AI chatbot (OpenAI, 100+ functions)</b>, an <b>AI venue-layout designer</b>, and
+            <b>AI-assisted bulk import</b>.</li>
+        <li>Razorpay payments, multi-currency (INR/SGD), QR-based check-in, role-based access,
+            and Puppeteer-generated PDF tickets.</li>
+      </ul>
+      <div><span class="tag">NestJS</span><span class="tag">React + TS</span><span class="tag">MongoDB</span><span class="tag">OpenAI</span></div>
+    </div>
+
+    <div class="job">
+      <div class="top">
+        <div><span class="ttl">XpenseAIQ</span> — AI Expense-Management Platform</div>
+        <span class="when">2026</span>
+      </div>
+      <ul>
+        <li>Multi-tenant expense platform that turns a photo of a receipt into structured data using
+            <b>vision-LLM OCR</b> (Qwen-VL) with Gemini/Mistral fallback for large PDFs and an
+            AI <b>chat</b> interface to query spend in natural language.</li>
+        <li>Built a <b>GraphRAG</b> knowledge graph (expenses ↔ vendors ↔ categories) for semantic
+            retrieval, plus an <b>8-rule fraud-detection engine</b> (duplicate, vendor-burst, and
+            price-anomaly scoring) and AI parsing of credit-card statements (CSV/XLSX/PDF).</li>
+      </ul>
+      <div><span class="tag">React + Vite</span><span class="tag">Node / Express</span><span class="tag">Qwen-VL Vision</span><span class="tag">GraphRAG</span><span class="tag">Fraud Detection</span></div>
+    </div>
+
+    <h2>Education</h2>
+    <div class="job" style="margin-bottom:8px">
+      <div class="top">
+        <div><span class="ttl">Master of Computer Applications (MCA)</span></div>
+        <span class="when">2023 – 2025</span>
+      </div>
+      <div style="font-size:11.5px;color:var(--muted)">
+        Shri Chimanbhai Patel Institute of Computer Applications · Sardar Vallabhbhai Global University
+      </div>
+    </div>
+    <div class="job">
+      <div class="top">
+        <div><span class="ttl">Bachelor of Computer Applications (BCA)</span></div>
+        <span class="when">2020 – 2023</span>
+      </div>
+      <div style="font-size:11.5px;color:var(--muted)">
+        Navgujarat College of Computer Applications · Gujarat University · CGPA 7.07
+      </div>
+    </div>
+
+    <h2>Certifications</h2>
+    <div class="certs">
+      <div>Certified in Cybersecurity (CC) — ISC2</div>
+      <div>Java Programming — Great Learning</div>
+      <div>Foundations of Data — Google (Coursera)</div>
+      <div>Cybersecurity Tools &amp; Cyberattacks — IBM (Coursera)</div>
+      <div>Technical Support Fundamentals — Google (Coursera)</div>
+      <div>Responsive Website Basics — Univ. of London (Coursera)</div>
+      <div>Programming in C — C-DAC (A+)</div>
+    </div>
+
+  </main>
+</div>
+</body>
+</html>
