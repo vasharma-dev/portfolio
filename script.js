@@ -16,7 +16,7 @@ burger.addEventListener('click', () => links.classList.toggle('open'));
 links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => links.classList.remove('open')));
 
 /* ===== typed role text ===== */
-const phrases = ['AI Engineer.', 'Full-Stack Developer.', 'LLM Tinkerer.', 'Agentic-System Builder.'];
+const phrases = ['AI Engineer.', 'Full-Stack Developer.', 'Agentic-System Builder.', 'NestJS + React Specialist.'];
 const typed = document.getElementById('typed');
 let pi = 0, ci = 0, deleting = false;
 (function type() {
