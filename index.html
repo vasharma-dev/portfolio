@@ -86,7 +86,7 @@
 <section class="stats">
   <div class="stat reveal"><span class="num" data-target="5">0</span><label>Production platforms live</label></div>
   <div class="stat reveal"><span class="num" data-target="100" data-suffix="+">0</span><label>LLM function-calling tools</label></div>
-  <div class="stat reveal"><span class="num" data-target="750" data-suffix="+">0</span><label>Commits shipped in 2026</label></div>
+  <div class="stat reveal"><span class="num" data-target="3">0</span><label>Mobile apps built</label></div>
   <div class="stat reveal"><span class="num" data-target="6">0</span><label>AI model providers integrated</label></div>
 </section>
 
@@ -189,15 +189,10 @@
     <article class="project reveal live">
       <div class="p-top"><span class="p-index">/01</span><span class="badge-live"><span class="dot"></span>Live · 3 domains</span></div>
       <h3>KiosCart <span class="p-kind">AI Commerce &amp; POS</span></h3>
-      <p>Multi-tenant commerce and kiosk-POS platform. Built <b>KiosAI</b>, a router-and-specialist
-        LLM shopkeeper assistant: a small model routes each message to one of 7 areas, then a
-        specialist runs with that area's slice of <b>50 function-calling tools</b> (orders,
-        catalogue, CRM, analytics, kiosk checkout). Qwen / Groq with automatic small-model
-        fallback, malformed-tool-call recovery, replies in 6 languages and a 26-case smoke suite.
-        Plus <b>Razorpay Route</b> marketplace payments (KYC, hold/release/refund, signed webhooks),
-        UPI / PayNow QR, per-shop <b>WhatsApp</b> linking with paced campaigns, expense approvals,
-        P&amp;L PDF and supplier purchase orders.</p>
-      <div class="p-tags"><span>50 LLM tools</span><span>Razorpay Route</span><span>WhatsApp campaigns</span><span>en · hi · gu</span></div>
+      <p>An all-in-one commerce and kiosk POS platform for shops and retail chains. Shopkeepers
+        run orders, inventory, customers and payments from one dashboard, and an <b>AI shop
+        assistant</b> lets them do it all in plain language.</p>
+      <div class="p-tags"><span>AI shop assistant</span><span>Kiosk ordering</span><span>Razorpay &amp; UPI</span><span>WhatsApp campaigns</span></div>
       <div class="p-links">
         <a href="https://kioscart.com" target="_blank">kioscart.com ↗</a>
         <a href="https://github.com/Jicama-tech/kioscart-v1" target="_blank">Code ↗</a>
@@ -208,16 +203,10 @@
     <article class="project reveal live">
       <div class="p-top"><span class="p-index">/02</span><span class="badge-live"><span class="dot"></span>Live · white-label</span></div>
       <h3>EventSH <span class="p-kind">AI Event Management</span></h3>
-      <p>Event-management SaaS for organisers, vendors, speakers and attendees — <b>46 backend
-        modules</b>, 157 merged PRs, ~240k lines of TypeScript. The LLM assistant routes across
-        11 dashboard areas with <b>51 role-filtered tools</b>, lives on three surfaces (dashboard,
-        landing page, public event pages) and caps each request at 3 tool calls. An <b>AI venue
-        designer</b> turns a description or a floor-plan photo into an editable stall/table layout;
-        AI import pulls an event from a URL and maps spreadsheet columns for bulk uploads.
-        <b>White-label</b>: one Docker stack per customer with a central instance registry, plus an
-        API-key integration pattern running live for SingAdvisor. PayNow / UPI QR payments,
-        Puppeteer tickets, QR check-in, 5 cron jobs, GitHub-Actions deploy.</p>
-      <div class="p-tags"><span>51 LLM tools</span><span>AI venue designer</span><span>White-label Docker</span><span>QR check-in</span></div>
+      <p>An event-management platform for organisers, vendors, speakers and attendees. It handles
+        ticketing, stalls, QR check-in and payments, with an <b>AI assistant</b> for organisers and
+        an <b>AI venue designer</b> that lays out the floor plan for you.</p>
+      <div class="p-tags"><span>AI assistant</span><span>AI venue designer</span><span>QR check-in</span><span>White-label</span></div>
       <div class="p-links">
         <a href="https://eventsh.com" target="_blank">eventsh.com ↗</a>
         <a href="https://github.com/Jicama-tech/eventsh-v1" target="_blank">Code ↗</a>
@@ -228,14 +217,10 @@
     <article class="project reveal live">
       <div class="p-top"><span class="p-index">/03</span><span class="badge-live"><span class="dot"></span>Live</span></div>
       <h3>SingAdvisor <span class="p-kind">Training, Events &amp; Consultancy</span></h3>
-      <p>Migrated a Next.js / Prisma site to a React SPA + NestJS API with <b>31 modules</b>
-        (~65k lines in 6 weeks): a course builder with paid enrolment, memberships with expiry
-        crons, a <b>CRM</b> that merges every lead form with EventSH attendees (CSV / Excel import),
-        WhatsApp campaigns over Baileys, and a <b>Konva venue-layout editor</b> with PDF export.
-        AI blog writing on Qwen in JSON mode. PayNow dynamic QR (EMVCo + CRC16) and Razorpay
-        checkout, an hourly mirror of EventSH events, and webhook auto-deploy that runs data
-        migrations before restart.</p>
-      <div class="p-tags"><span>Next.js → React migration</span><span>PayNow EMVCo QR</span><span>CRM</span><span>Konva editor</span></div>
+      <p>A platform for a Singapore training and consultancy business: courses with paid
+        enrolment, memberships, events, a <b>CRM</b> for every lead, a blog with <b>AI writing
+        help</b> and WhatsApp campaigns to reach members.</p>
+      <div class="p-tags"><span>Courses &amp; memberships</span><span>CRM</span><span>AI blog writer</span><span>PayNow QR</span></div>
       <div class="p-links">
         <a href="https://singadvisor.com" target="_blank">singadvisor.com ↗</a>
         <a href="https://github.com/Jicama-tech/singadvisor" target="_blank">Code ↗</a>
@@ -246,16 +231,10 @@
     <article class="project reveal live">
       <div class="p-top"><span class="p-index">/04</span><span class="badge-live"><span class="dot"></span>Live · Android app</span></div>
       <h3>PillGit <span class="p-kind">Clinic &amp; Patient Care (formerly CareNest)</span></h3>
-      <p>Took over a Lovable / Supabase prototype and rebuilt it as a production healthcare
-        platform in 4 weeks: NestJS + MongoDB backend (<b>26 modules</b>), React / shadcn web app
-        and a native <b>Flutter</b> Android app (~14k lines of Dart) shipped through Shorebird
-        code-push (1.0.1 → 1.0.9). Moved the medical AI to Qwen with OpenAI fallback: a 4-role
-        chat assistant (patient, doctor, symptom checker, drug interactions), <b>image analysis</b>
-        for radiology / dermatology / pathology and clinical text tools (entities, summaries,
-        risk scoring, ICD-10 hints). Family profiles with consent-based record sharing, doctor
-        availability enforced on booking, Google Calendar sync, compressed PDF lab reports, and
-        Hindi / Gujarati / Marathi with translation-coverage tests.</p>
-      <div class="p-tags"><span>Flutter + Shorebird</span><span>Vision AI</span><span>Google Calendar</span><span>hi · gu · mr</span></div>
+      <p>A healthcare platform for clinics and patients, on the web and as an Android app:
+        appointments, prescriptions, lab reports, family profiles and a <b>medical AI assistant</b>
+        that helps read reports and images. Available in English, Hindi, Gujarati and Marathi.</p>
+      <div class="p-tags"><span>Android app</span><span>Medical AI</span><span>Appointments</span><span>4 languages</span></div>
       <div class="p-links">
         <a href="https://pillgit.com" target="_blank">pillgit.com ↗</a>
         <span class="priv">Private repository</span>
@@ -271,26 +250,20 @@
     <article class="project reveal building">
       <div class="p-top"><span class="p-index">/05</span><span class="badge-dev"><span class="dot"></span>v0.1.0 · release candidate</span></div>
       <h3>@jicama-tech/whatsapp <span class="p-kind">Multi-tenant WhatsApp library for NestJS + React</span></h3>
-      <p>Drop-in WhatsApp (Baileys) extracted from KiosCart, EventSH and SingAdvisor. Per-tenant
-        QR / pairing-code linking, one socket per session with 30-second leases so several
-        processes stay safe, encrypted credentials, jittered reconnect back-off, paced sending
-        with crash-safe idempotency keys, bulk jobs and inbound media restricted to WhatsApp's own
-        servers. Dual ESM / CJS build (tsdown), 5 entry points, <b>~17k lines and 51 test files</b>
-        on Vitest, a threat model and migration guides for each host app.</p>
-      <div class="p-tags"><span>npm library</span><span>Baileys</span><span>51 test files</span><span>ESM + CJS</span></div>
+      <p>A drop-in library that lets any NestJS + React app connect its users' own WhatsApp
+        numbers and send <b>OTPs, notifications and campaigns</b> reliably. Extracted from the
+        platforms above so every new product gets WhatsApp in minutes.</p>
+      <div class="p-tags"><span>npm library</span><span>Multi-tenant</span><span>OTP &amp; campaigns</span><span>Fully tested</span></div>
       <div class="p-links"><span class="priv">Prepared for GitHub Packages</span><span class="p-stack">TypeScript · NestJS · React</span></div>
     </article>
 
     <article class="project reveal">
       <div class="p-top"><span class="p-index">/06</span><span class="p-stack">Open source · MIT</span></div>
       <h3>Tangr <span class="p-kind">Embeddable Feedback SaaS</span></h3>
-      <p>One script tag adds a themed feedback button; submissions land in a multi-tenant
-        dashboard. Hashed, origin-locked API keys, Google OAuth, <b>Stripe Checkout</b> with
-        token-based billing, super-admin plans, role-based teams and a bug activity timeline.
-        <b>AI analysis</b> (Qwen or local Ollama, heuristic fallback) writes a one-line summary, tags
-        the module and groups duplicates. Closing a bug offloads its video attachments to the
-        owner's Google Drive.</p>
-      <div class="p-tags"><span>Widget + SDK</span><span>Stripe billing</span><span>AI dedupe</span><span>Google Drive offload</span></div>
+      <p>Add one script tag to a website and visitors get a feedback button. Reports land in a
+        dashboard where <b>AI summarises them and groups duplicates</b>, with team access and
+        subscription billing built in. Open source.</p>
+      <div class="p-tags"><span>Widget + SDK</span><span>AI summaries</span><span>Stripe billing</span></div>
       <div class="p-links">
         <a href="https://github.com/vasharma-dev/feedback-plugin" target="_blank">Code ↗</a>
         <span class="p-stack">Express · Prisma · React · Tailwind</span>
@@ -300,11 +273,10 @@
     <article class="project reveal live">
       <div class="p-top"><span class="p-index">/07</span><span class="badge-live"><span class="dot"></span>Live</span></div>
       <h3>jicama.tech <span class="p-kind">Company site &amp; platform registry</span></h3>
-      <p>Company website with blog, newsletter and admin dashboard. <b>AI-assisted blog writing</b>
-        (Qwen for text; Gemini / Together / Pollinations / Unsplash for images), an enquiry inbox
-        with email replies, and a <b>platform registry</b> that provisions client instances with
-        license keys and tracks their sync status. PM2 + Nginx + Certbot with webhook auto-deploy.</p>
-      <div class="p-tags"><span>React 19 + Tailwind 4</span><span>AI blog</span><span>License registry</span></div>
+      <p>The Jicama Tech company website with a blog, newsletter and admin dashboard, plus a
+        <b>client registry</b> that provisions and tracks each customer's installation of our
+        platforms.</p>
+      <div class="p-tags"><span>Blog &amp; newsletter</span><span>AI writing help</span><span>Client registry</span></div>
       <div class="p-links">
         <a href="https://jicama.tech" target="_blank">jicama.tech ↗</a>
         <span class="p-stack">React 19 · NestJS 11 · MongoDB</span>
@@ -314,11 +286,10 @@
     <article class="project reveal building">
       <div class="p-top"><span class="p-index">/08</span><span class="badge-dev"><span class="dot"></span>Spec &amp; scaffold</span></div>
       <h3>Kiranbee <span class="p-kind">Hyperlocal delivery for neighbourhood shops</span></h3>
-      <p>Architecture and a <b>3,000-line RFC-2119 implementation spec</b> for a kirana-store
-        delivery platform: map-based shop discovery, live rider tracking over socket.io,
-        Razorpay / cash-on-delivery, money in paise, PostGIS geography columns and Expo push
-        rules. Monorepo scaffolded with npm workspaces and a PostGIS compose stack.</p>
-      <div class="p-tags"><span>System design</span><span>PostGIS</span><span>Expo / React Native</span><span>Sep 2026</span></div>
+      <p>A planned delivery platform for neighbourhood shops: customers find nearby stores on a
+        map, order, and <b>track the rider live</b>. Currently at the architecture and
+        specification stage.</p>
+      <div class="p-tags"><span>System design</span><span>Maps &amp; live tracking</span><span>Mobile app</span></div>
       <div class="p-links"><span class="priv">Private · early stage</span><span class="p-stack">NestJS 11 · Drizzle · PostgreSQL</span></div>
     </article>
 
@@ -330,25 +301,23 @@
     <div class="more-item reveal">
       <h4>XpenseAIQ <span>· Jicama Tech · contributor</span></h4>
       <span class="m-when">May — Jun 2026</span>
-      <p>Release management and app-store compliance for the AI expense app's mobile client:
-        Sign in with Apple, RevenueCat in-app purchases, group / split shortcuts in chat, an
-        embedded PDF-report font and bug-fix batches across 8 releases (v5.3.49 → v5.3.61).</p>
+      <p>Helped ship the mobile client of Jicama's AI expense-tracking app: App Store
+        compliance, in-app purchases and bug-fix releases.</p>
     </div>
 
     <div class="more-item reveal">
       <h4>EventSH &amp; KiosCart v0 <span>· first-generation platform</span></h4>
       <span class="m-when">Aug 2025 — Mar 2026</span>
-      <p>The original shared NestJS backend (19 modules: organisers, stalls, tickets, storefronts,
-        POS, coupons, WhatsApp OTP, Razorpay, Puppeteer receipts) and the Vite / React fronts that
-        the v1 platforms above replaced.</p>
+      <p>The first version of the platforms above: a shared backend for organisers, stalls,
+        tickets, storefronts and POS, later replaced by the v1 rebuilds.</p>
       <div class="m-links"><a href="https://github.com/Jicama-tech/EMS-Backend" target="_blank">Backend code ↗</a></div>
     </div>
 
     <div class="more-item reveal">
       <h4>esign-workflow <span>· NestJS · TypeORM · PostgreSQL</span></h4>
       <span class="m-when">Jul 2025</span>
-      <p>Multi-role sequential e-signature workflow on the Documenso API: upload a PDF, define
-        three signer roles, and advance the document through each signature in order.</p>
+      <p>A sequential e-signature workflow: upload a PDF, assign signer roles and route it
+        through each signature in order.</p>
       <div class="m-links"><a href="https://github.com/vasharma-dev/esign-workflow" target="_blank">Code ↗</a></div>
     </div>
 
@@ -382,12 +351,9 @@
       <div class="tl-body">
         <h3>AI &amp; Full-Stack Developer <span>· Jicama Tech Pvt. Ltd.</span></h3>
         <p>Sole engineer behind five live platforms — KiosCart, EventSH, SingAdvisor, PillGit and
-          jicama.tech. Designed two router-and-specialist LLM assistants (101 function-calling
-          tools between them), an AI venue designer and AI import pipelines; built Razorpay Route,
-          PayNow / UPI and WhatsApp (Baileys) integrations; shipped Capacitor and Flutter mobile
-          apps; packaged the WhatsApp layer as an internal npm library; and run the Ubuntu VPS
-          fleet (Nginx, PM2, Docker, Certbot, GitHub-Actions / webhook auto-deploy). 750+ commits
-          and 157 merged PRs in 2026.</p>
+          jicama.tech — owning backend, frontend, mobile and the AI layer. Designed the LLM
+          assistants, AI venue designer and AI import pipelines; built the payments, WhatsApp and
+          mobile integrations; and run the servers and deployments that keep everything live.</p>
       </div>
     </div>
     <div class="tl-item reveal">
